@@ -1,6 +1,8 @@
 #define IMG_MAX	26
 #define MBN_HEADER_LEN	0x28
 #define HW_ID_OFFSET	0x235
+#define ELF_IMAGE	0x464C457F
+#define SBL_IMAGE	0x844BDCD1
 
 struct sbl_header {
 	uint32_t offset;

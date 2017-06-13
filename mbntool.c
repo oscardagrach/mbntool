@@ -109,7 +109,7 @@ int parse_header(char* image)
 	fclose(inf);
 	
 	result = *(uint32_t*)data;
-	if (result == 0x844BDCD1)
+	if (result == SBL_IMAGE)
 	{
 		printf("Detected SBL1 image!\n\n");
 		parse_sbl(data);
@@ -120,7 +120,7 @@ int parse_header(char* image)
 		printf("Detected MBN image!\n\n");
 		parse_mbn(data);
 	}
-	else if (result == 0x464c457f)
+	else if (result == ELF_IMAGE)
 	{
 		printf("Detected ELF image, not support!\n\n");
 	}
